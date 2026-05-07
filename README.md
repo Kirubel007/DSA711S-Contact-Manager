@@ -7,12 +7,11 @@ BST and AVL Tree Contact Management System – DSA711S Mini Project 2026
 
 | Name | Student No. | Role | File |
 |------|-------------|------|------|
-| Kirubel | 224001213 | Person 1 – Node class + BST Insert & Search | Node.java, BST.java |
-| [Member 2] | [Student No.] | Person 2 – BST Traversal + Height + Balance Factor | BST.java |
-| [Member 3] | [Student No.] | Person 3 – AVL LL & RR Rotations | AVLTree.java |
-| [Member 4] | [Student No.] | Person 4 – AVL LR & RL Rotations + AVL Insert | AVLTree.java |
-| [Member 5] | [Student No.] | Person 5 – Test Cases + Main.java | Main.java, TestCases.java |
-| [Member 6] | [Student No.] | Person 6 – Project Report | DSA711S_Report.pdf |
+| Kirubel Hailu | 224001213 | Person 1 – Node class + BST Insert & Search | Node.java, BST.java |
+| Silvio Ivanio | 224046179 | Person 2 – BST Traversal + Height + Balance Factor | BST.java |
+| Tk Hambira | 220097755 | Person 3 – AVL LL & RR Rotations | AVLTree.java |
+| Chido Kavai | 224009133 | Person 4 – AVL LR & RL Rotations + AVL Insert | AVLTree.java |
+| Anselmo Martins | 224065955 | Person 5 – Test Cases + Main.java | Main.java, TestCases.java |
 
 ---
 
