@@ -41,4 +41,44 @@ public class AVLTree extends BST {
 
         return y;
     }
+
+    public void insertAVL(String name) {
+    root = insertAVL(root, name);
+}
+//insert
+private Node insertAVL(Node node, String name) {
+
+    if (node == null) {
+        return new Node(name);
+    }
+
+    if (name.compareToIgnoreCase(node.name) < 0) {
+        node.left = insertAVL(node.left, name);
+    }
+    else if (name.compareToIgnoreCase(node.name) > 0) {
+        node.right = insertAVL(node.right, name);
+    }
+    else {
+        return node;
+    }
+
+    node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
+
+    int balance = getBalanceFactor(node);
+
+   
+//LR Case
+    if (balance > 1 && name.compareToIgnoreCase(node.left.name) > 0) {
+       node.left = rotateLeft(node.left);
+        return rotateRight(node);
+    }
+//RL Case
+    if (balance < -1 && name.compareToIgnoreCase(node.right.name) < 0) {
+        node.right = rotateRight(node.right);
+        return rotateLeft(node);
+    }
+
+ return node;
+}
+
 }
