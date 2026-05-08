@@ -12,9 +12,9 @@
 |------|-------------|------|-------------------|
 | Kirubel Hailu | 224001213 | Person 1 | Node class, Recursive BST Insert & Search |
 | Silvio Ivanio | 224046179 | Person 2 | Inorder Traversal, Height & Balance Factor |
-| Tk Hambira | 220097755 | Person 3 | *[Pending: AVL LL & RR Rotations]* |
-| Chido Kavai | 224009133 | Person 4 | *[Pending: AVL LR & RL Rotations + Insert]* |
-| Anselmo Martins | 224065955 | Person 5 | *[Pending: Test Cases + Main.java]* |
+| Tk Hambira | 220097755 | Person 3 | AVL LL & RR Rotations |
+| Chido Kavai | 224009133 | Person 4 | AVL LR & RL Rotations + Insert |
+| Anselmo Martins | 224065955 | Person 5 | Test Cases + Main.java |
 
 ---
 
@@ -54,11 +54,11 @@ The BST class implements the standard non-balancing tree logic:
 - **Search/Insert (Average Case):** $O(\log n)$ when the tree is relatively balanced.
 - **Search/Insert (Worst Case):** $O(n)$ if the names are inserted in alphabetical order (e.g., "Alice", "Bob", "Charlie"), resulting in a skewed "linked-list" structure.
 
-### 4.2 AVL Performance (Pending Implementation)
-- **Search/Insert:** $O(\log n)$ guaranteed due to the self-balancing property achieved through rotations.
+### 4.2 AVL Performance
+- **Search/Insert:** $O(\log n)$ guaranteed. By actively monitoring the balance factor and performing LL, RR, LR, or RL rotations, the AVL tree strictly maintains a logarithmic height. This prevents the degradation to $O(n)$ seen in unbalanced BSTs during sequential insertions.
 
 ---
 
 ## 5. Reflection
 
-*[To be completed by the group once all modules are integrated.]*
+Throughout this mini-project, our team learned the practical importance of self-balancing trees. We observed firsthand how a standard BST can degrade into a linked list when fed sorted data, severely impacting performance. Implementing the strict recursive logic for height and balance factors solidified our understanding of tree traversals. Finally, coordinating across 5 members taught us the value of modular design, Git version control, and cross-member code verification.
