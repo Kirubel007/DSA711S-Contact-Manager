@@ -1,4 +1,5 @@
-// Person 5 & 6: (add names)
+
+// Person 5: Anselmo
 // Entry point — console menu that lets the user interact with
 // both the BST and the AVL tree side by side.
 import java.util.Scanner;

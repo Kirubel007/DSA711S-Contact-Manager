@@ -31,7 +31,7 @@ Person 6 works independently from the start
 3. Person 3 creates AVLTree.java with LL and RR rotations
 4. Person 4 pulls and adds LR, RL rotations and AVL insert to AVLTree.java
 5. Person 5 writes TestCases.java and Main.java once everyone is done
-6. Person 6 writes the report throughout
+6. The team writes the report throughout
 
 ---
 

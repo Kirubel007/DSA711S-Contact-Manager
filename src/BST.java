@@ -1,4 +1,4 @@
-//Person 2
+//Person 1 (Kirubel)
 public class BST {
     Node root;
 
@@ -23,8 +23,7 @@ public class BST {
             return current;
         }
 
-        // Modified by Person 2(Silvio): Update height of this ancestor node to maintain
-        // O(log n) AVL performance
+        // Update height of the current node after insertion (Added by Silvio)
         current.height = 1 + Math.max(getHeight(current.left), getHeight(current.right));
 
         return current;
@@ -48,7 +47,8 @@ public class BST {
         }
     }
 
-    // --- Added by Person 2(Silvio) ---
+    // Person 2: Silvio
+    // --- Traversal and Height Operations ---
 
     // 1. Display contacts using inorder traversal (Recursive)
     public void displayInorder() {
@@ -72,9 +72,8 @@ public class BST {
         return node.height;
     }
 
-    // 3. Compute height of the entire tree (Recursive traversal per rubric)
-    // We must do a full recursive traversal here to satisfy the "Use recursion for all tree operations" 
-    // requirement, even though we cache 'height' for O(1) AVL lookups.
+    // 3. Compute height of the entire tree using strict recursion
+    // (A separate O(N) recursive traversal to satisfy assignment requirements)
     public int height() {
         return computeHeightRecursive(root);
     }

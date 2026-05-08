@@ -2,15 +2,18 @@
 
 public class Node {
     String name;
-    // Modified by Person 2(Silvio): Added height attribute to achieve O(log n)
-    // complexity for AVL trees as required by rubric.
+
+    // Cached height attribute to achieve O(log n) complexity for AVL tree
+    // balancing.
     int height;
 
     Node left, right;
 
     public Node(String name) {
         this.name = name;
-        this.height = 0; // New nodes are initially added at leaf level
+        // Leaf nodes are initialized with a height of 0 per course convention. (Added
+        // by Silvio)
+        this.height = 0;
         this.left = null;
         this.right = null;
     }

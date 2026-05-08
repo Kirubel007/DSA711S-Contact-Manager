@@ -2,7 +2,10 @@
 // Person 3: 220097755 Tk Hambira
 public class AVLTree extends BST {
 
-    // RIGHT ROTATION (LL Case)
+    /**
+     * Performs a Right Rotation to resolve a Left-Left (LL) imbalance.
+     * Complexity: O(1)
+     */
     protected Node rotateRight(Node y) {
 
         // x becomes new root of this subtree
@@ -22,7 +25,10 @@ public class AVLTree extends BST {
         return x;
     }
 
-    // LEFT ROTATION (RR Case)
+    /**
+     * Performs a Left Rotation to resolve a Right-Right (RR) imbalance.
+     * Complexity: O(1)
+     */
     protected Node rotateLeft(Node x) {
 
         // y becomes new root of this subtree
@@ -43,10 +49,15 @@ public class AVLTree extends BST {
     }
 
     public void insertAVL(String name) {
-    root = insertAVL(root, name);
-}
-//insert
-private Node insertAVL(Node node, String name) {
+        root = insertAVL(root, name);
+    }
+
+    /**
+     * Recursive AVL Insertion.
+     * Maintains O(log n) tree height by checking the balance factor at each ancestor
+     * and performing necessary rotations during the recursive unwinding phase.
+     */
+    private Node insertAVL(Node node, String name) {
 
     if (node == null) {
         return new Node(name);
@@ -66,22 +77,23 @@ private Node insertAVL(Node node, String name) {
 
     int balance = getBalanceFactor(node);
 
-//LL Case
+    // 1. Left-Left (LL) Case: Unbalanced on the left child's left subtree
     if (balance > 1 && name.compareToIgnoreCase(node.left.name) < 0) {
         return rotateRight(node);
     }
 
- //RR Case
+    // 2. Right-Right (RR) Case: Unbalanced on the right child's right subtree
     if (balance < -1 && name.compareToIgnoreCase(node.right.name) > 0) {
         return rotateLeft(node);
     }
      
-//LR Case
+    // 3. Left-Right (LR) Case: Unbalanced on the left child's right subtree
     if (balance > 1 && name.compareToIgnoreCase(node.left.name) > 0) {
-       node.left = rotateLeft(node.left);
+        node.left = rotateLeft(node.left);
         return rotateRight(node);
     }
-//RL Case
+
+    // 4. Right-Left (RL) Case: Unbalanced on the right child's left subtree
     if (balance < -1 && name.compareToIgnoreCase(node.right.name) < 0) {
         node.right = rotateRight(node.right);
         return rotateLeft(node);
