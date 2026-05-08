@@ -16,7 +16,7 @@ public class TestCases {
             skewedBST.insert(name);
             skewedAVL.insertAVL(name);
         }
-        System.out.println("BST Height (Should be 4 for 5 nodes): " + skewedBST.height());
+        System.out.println("\nBST Height (Should be 4 for 5 nodes): " + skewedBST.height());
         System.out.println("AVL Height (Should be balanced ~2): " + skewedAVL.height());
 
         // II. Balanced Insertion Case

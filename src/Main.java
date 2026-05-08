@@ -25,6 +25,7 @@ public class Main {
             System.out.println("3. Display Contacts");
             System.out.println("4. Tree Heights");
             System.out.println("5. Balance Factor");
+            System.out.println("6. Run Automated Tests");
             System.out.println("0. Exit");
 
             System.out.print("Choose option: ");
@@ -58,9 +59,9 @@ public class Main {
                     System.out.print("Enter name to search: ");
                     String searchName = in.nextLine().trim();
                     if (bst.search(searchName)) {
-                        System.out.println("BST : Contact Found");
+                        System.out.println("\nBST : Contact Found");
                     } else {
-                        System.out.println("BST : Contact Not Found");
+                        System.out.println("\nBST : Contact Not Found");
                     }
                     if (avl.search(searchName)) {
                         System.out.println("AVL : Contact Found");
@@ -75,7 +76,7 @@ public class Main {
                     avl.displayInorder();
                     break;
                 case 4:
-                    System.out.println("BST Height : " + bst.height());
+                    System.out.println("\nBST Height : " + bst.height());
                     System.out.println("AVL Height : " + avl.height());
                     break;
                 case 5:
@@ -84,6 +85,9 @@ public class Main {
 
                     System.out.println("AVL Root Balance Factor : "
                             + avl.getBalanceFactor(avl.root));
+                    break;
+                case 6:
+                    TestCases.runTests();
                     break;
                 case 0:
                     System.out.println("Program Ended.");
