@@ -66,7 +66,16 @@ private Node insertAVL(Node node, String name) {
 
     int balance = getBalanceFactor(node);
 
-   
+//LL Case
+    if (balance > 1 && name.compareToIgnoreCase(node.left.name) < 0) {
+        return rotateRight(node);
+    }
+
+ //RR Case
+    if (balance < -1 && name.compareToIgnoreCase(node.right.name) > 0) {
+        return rotateLeft(node);
+    }
+     
 //LR Case
     if (balance > 1 && name.compareToIgnoreCase(node.left.name) > 0) {
        node.left = rotateLeft(node.left);
